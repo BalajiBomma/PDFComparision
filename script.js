@@ -1,6 +1,6 @@
 // ===== PDF.js Module Import =====
-import * as pdfjsLib from "./lib/pdf.mjs";
-pdfjsLib.GlobalWorkerOptions.workerSrc = "./lib/pdf.worker.mjs";
+import * as pdfjsLib from "./pdf.mjs";
+pdfjsLib.GlobalWorkerOptions.workerSrc = "./pdf.worker.mjs";
 
 /* ===== Escape HTML ===== */
 function escapeHtml(text) {
@@ -129,3 +129,4 @@ async function comparePDFs() {
 
 /* ===== Button Event ===== */
 document.getElementById("compareBtn").addEventListener("click", comparePDFs);
+
