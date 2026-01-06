@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Easy Compare – PDF Comparison Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* ===== Developer Credit Floating Badge ===== */
+      .developer-credit {
+        position: fixed; /* floats on top */
+        top: 10px;
+        right: 10px; /* top-right corner */
+        background: #ffeb3b; /* bright yellow */
+        color: #000;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        font-family: "Segoe UI", Arial, sans-serif;
+        z-index: 9999; /* always above everything */
+        pointer-events: none; /* click-through */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Developer Credit -->
+    <div class="developer-credit">Developed by @Balaji Bomma</div>
+
+    <h2>Easy Compare – PDF Comparison Tool</h2>
+    <p>Compare two PDF files side by side and identify differences.</p>
+
+    <div class="upload-section">
+      <input type="file" id="pdf1" accept="application/pdf" />
+      <input type="file" id="pdf2" accept="application/pdf" />
+      <button id="compareBtn">Compare PDFs</button>
+    </div>
+
+    <hr />
+
+    <div class="pdf-container">
+      <div class="pdf-box">
+        <h3>PDF 1</h3>
+        <div id="pdf1-view" class="pdf-view"></div>
+      </div>
+      <div class="pdf-box">
+        <h3>PDF 2</h3>
+        <div id="pdf2-view" class="pdf-view"></div>
+      </div>
+    </div>
+
+    <h3>Differences Summary</h3>
+    <div id="diffResult" class="diff-summary">
+      Upload PDFs and click Compare
+    </div>
+
+    <!-- Diff library -->
+    <script src="./lib/diff.min.js"></script>
+    <!-- PDF.js -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
